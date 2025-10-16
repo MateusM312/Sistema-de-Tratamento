@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { supabase, SteelType } from '../lib/supabase';
-import { Package } from 'lucide-react';
+import { Package, Trash2 } from 'lucide-react';
 
 export default function SteelTypeList() {
   const [steelTypes, setSteelTypes] = useState<SteelType[]>([]);
   const [loading, setLoading] = useState(true);
+  const [deleting, setDeleting] = useState<string | null>(null);
 
   useEffect(() => {
     loadSteelTypes();
@@ -23,6 +24,28 @@ export default function SteelTypeList() {
       console.error('Erro ao carregar tipos de aço:', err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id: string, code: string) => {
+    if (!confirm(`Tem certeza que deseja excluir o aço ${code}?`)) {
+      return;
+    }
+
+    setDeleting(id);
+    try {
+      const { error } = await supabase
+        .from('steel_types')
+        .delete()
+        .eq('id', id);
+
+      if (error) throw error;
+
+      setSteelTypes(steelTypes.filter(steel => steel.id !== id));
+    } catch (err: any) {
+      alert(`Erro ao excluir: ${err.message}`);
+    } finally {
+      setDeleting(null);
     }
   };
 
@@ -48,13 +71,23 @@ export default function SteelTypeList() {
       {steelTypes.map((steel) => (
         <div
           key={steel.id}
-          className="p-4 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+          className="p-4 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow relative group"
         >
           <div className="flex items-start justify-between mb-2">
             <h4 className="font-bold text-gray-900">{steel.code}</h4>
-            <span className="px-2 py-1 text-xs font-medium bg-[#00205B] bg-opacity-10 text-[#00205B] rounded">
-              {steel.category}
-            </span>
+            <div className="flex items-center gap-2">
+              <span className="px-2 py-1 text-xs font-medium bg-[#00205B] bg-opacity-10 text-[#00205B] rounded">
+                {steel.category}
+              </span>
+              <button
+                onClick={() => handleDelete(steel.id, steel.code)}
+                disabled={deleting === steel.id}
+                className="opacity-0 group-hover:opacity-100 transition-opacity p-1 text-red-600 hover:bg-red-50 rounded disabled:opacity-50"
+                title="Excluir"
+              >
+                <Trash2 className="w-4 h-4" />
+              </button>
+            </div>
           </div>
           <p className="text-sm text-gray-600">{steel.name}</p>
         </div>

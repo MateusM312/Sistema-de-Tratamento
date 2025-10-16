@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { supabase, WorkInstruction } from '../lib/supabase';
-import { FileText, Thermometer, Clock, ShieldCheck } from 'lucide-react';
+import { FileText, Thermometer, Clock, ShieldCheck, Trash2 } from 'lucide-react';
 
 export default function WorkInstructionList() {
   const [instructions, setInstructions] = useState<WorkInstruction[]>([]);
   const [loading, setLoading] = useState(true);
+  const [deleting, setDeleting] = useState<string | null>(null);
 
   useEffect(() => {
     loadInstructions();
@@ -23,6 +24,28 @@ export default function WorkInstructionList() {
       console.error('Erro ao carregar ITs:', err);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleDelete = async (id: string, itCode: string) => {
+    if (!confirm(`Tem certeza que deseja excluir a IT ${itCode}?`)) {
+      return;
+    }
+
+    setDeleting(id);
+    try {
+      const { error } = await supabase
+        .from('work_instructions')
+        .delete()
+        .eq('id', id);
+
+      if (error) throw error;
+
+      setInstructions(instructions.filter(instruction => instruction.id !== id));
+    } catch (err: any) {
+      alert(`Erro ao excluir: ${err.message}`);
+    } finally {
+      setDeleting(null);
     }
   };
 
@@ -48,10 +71,10 @@ export default function WorkInstructionList() {
       {instructions.map((instruction) => (
         <div
           key={instruction.id}
-          className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow"
+          className="p-6 bg-white border border-gray-200 rounded-lg hover:shadow-md transition-shadow group relative"
         >
           <div className="flex items-start justify-between mb-4">
-            <div>
+            <div className="flex-1">
               <div className="flex items-center gap-3 mb-2">
                 <h4 className="font-bold text-lg text-gray-900">{instruction.it_code}</h4>
                 <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded">
@@ -72,7 +95,17 @@ export default function WorkInstructionList() {
                 <p className="text-sm text-gray-600 mt-1">{instruction.description}</p>
               )}
             </div>
-            <span className="text-xs text-gray-500">v{instruction.version}</span>
+            <div className="flex items-center gap-2">
+              <span className="text-xs text-gray-500">v{instruction.version}</span>
+              <button
+                onClick={() => handleDelete(instruction.id, instruction.it_code)}
+                disabled={deleting === instruction.id}
+                className="opacity-0 group-hover:opacity-100 transition-opacity p-2 text-red-600 hover:bg-red-50 rounded disabled:opacity-50"
+                title="Excluir"
+              >
+                <Trash2 className="w-5 h-5" />
+              </button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -90,7 +123,7 @@ export default function WorkInstructionList() {
 
             {(instruction.duration_min !== null || instruction.duration_max !== null) && (
               <div className="flex items-start gap-2">
-                <Clock className="w-4 h-4 text-blue-600 mt-1 flex-shrink-0" />
+                <Clock className="w-4 h-4 text-[#00205B] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-gray-500 font-medium">Duração</p>
                   <p className="text-sm text-gray-900">

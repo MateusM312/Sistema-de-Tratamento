@@ -15,7 +15,7 @@ function App() {
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/image.png" alt="Normatic" className="h-12" />
+              <img src="/image-removebg-preview.png" alt="Normatic" className="h-12" />
               <div>
                 <h1 className="text-2xl font-bold text-white">Sistema de Tratamento Térmico</h1>
                 <p className="text-sm text-gray-200">Assistente Inteligente de Recomendações</p>
