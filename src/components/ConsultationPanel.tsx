@@ -90,7 +90,7 @@ export default function ConsultationPanel() {
                 value={formData.steelCode}
                 onChange={(e) => setFormData({ ...formData, steelCode: e.target.value })}
                 placeholder="Ex: AISI 4140"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
 
@@ -103,7 +103,7 @@ export default function ConsultationPanel() {
                 value={formData.pieceDescription}
                 onChange={(e) => setFormData({ ...formData, pieceDescription: e.target.value })}
                 placeholder="Ex: Eixo de transmissão"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
           </div>
@@ -119,7 +119,7 @@ export default function ConsultationPanel() {
                 value={formData.inputHardness}
                 onChange={(e) => setFormData({ ...formData, inputHardness: e.target.value })}
                 placeholder="Ex: 20"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
 
@@ -133,7 +133,7 @@ export default function ConsultationPanel() {
                 value={formData.desiredHardness}
                 onChange={(e) => setFormData({ ...formData, desiredHardness: e.target.value })}
                 placeholder="Ex: 55"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
           </div>
@@ -148,7 +148,7 @@ export default function ConsultationPanel() {
                 value={formData.userName}
                 onChange={(e) => setFormData({ ...formData, userName: e.target.value })}
                 placeholder="Seu nome"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
 
@@ -161,7 +161,7 @@ export default function ConsultationPanel() {
                 value={formData.clientName}
                 onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
                 placeholder="Nome do cliente"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
           </div>

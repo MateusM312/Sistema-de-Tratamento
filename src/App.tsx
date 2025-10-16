@@ -11,11 +11,11 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
-      <header className="bg-[#00205B] border-b border-[#00205B] shadow-sm sticky top-0 z-40">
+      <header className="bg-[#1B5672] border-b border-[#1B5672] shadow-sm sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <img src="/image-removebg-preview.png" alt="Normatic" className="h-12" />
+              <img src="/image copy.png" alt="Normatic" className="h-16" />
               <div>
                 <h1 className="text-2xl font-bold text-white">Sistema de Tratamento Térmico para Normatic</h1>
                 <p className="text-sm text-gray-200">Assistente Inteligente de Recomendações</p>
@@ -29,7 +29,7 @@ function App() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                 currentView === 'consultation'
                   ? 'bg-[#DA291C] text-white'
-                  : 'text-white hover:bg-[#003879]'
+                  : 'text-white hover:bg-[#134458]'
               }`}
             >
               <Search className="w-5 h-5" />
@@ -40,7 +40,7 @@ function App() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                 currentView === 'admin'
                   ? 'bg-[#DA291C] text-white'
-                  : 'text-white hover:bg-[#003879]'
+                  : 'text-white hover:bg-[#134458]'
               }`}
             >
               <Settings className="w-5 h-5" />
@@ -51,7 +51,7 @@ function App() {
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                 currentView === 'history'
                   ? 'bg-[#DA291C] text-white'
-                  : 'text-white hover:bg-[#003879]'
+                  : 'text-white hover:bg-[#134458]'
               }`}
             >
               <History className="w-5 h-5" />
@@ -67,7 +67,7 @@ function App() {
         {currentView === 'history' && <HistoryPanel />}
       </main>
 
-      <footer className="bg-[#00205B] border-t border-[#00205B] mt-12">
+      <footer className="bg-[#1B5672] border-t border-[#1B5672] mt-12">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <p className="text-center text-sm text-gray-200">
             comercial@normatic.com.br | Normatic Tratamentos Térmicos | R. Anselmo Vaccari, 254 - Águas Belas, São José dos Pinhais - PR | 83.040-580

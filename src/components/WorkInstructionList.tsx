@@ -81,7 +81,7 @@ export default function WorkInstructionList() {
                   {instruction.treatment_type}
                 </span>
                 {instruction.is_active ? (
-                  <span className="px-2 py-1 text-xs font-medium bg-[#00205B] bg-opacity-10 text-[#00205B] rounded">
+                  <span className="px-2 py-1 text-xs font-medium bg-[#1B5672] bg-opacity-10 text-[#1B5672] rounded">
                     Ativa
                   </span>
                 ) : (
@@ -123,7 +123,7 @@ export default function WorkInstructionList() {
 
             {(instruction.duration_min !== null || instruction.duration_max !== null) && (
               <div className="flex items-start gap-2">
-                <Clock className="w-4 h-4 text-[#00205B] mt-1 flex-shrink-0" />
+                <Clock className="w-4 h-4 text-[#1B5672] mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-xs text-gray-500 font-medium">Duração</p>
                   <p className="text-sm text-gray-900">

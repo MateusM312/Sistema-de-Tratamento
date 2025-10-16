@@ -70,7 +70,7 @@ export default function SteelTypeForm({ onClose, onSuccess }: SteelTypeFormProps
               value={formData.code}
               onChange={(e) => setFormData({ ...formData, code: e.target.value })}
               placeholder="Ex: AISI 4140"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
             />
           </div>
 
@@ -84,7 +84,7 @@ export default function SteelTypeForm({ onClose, onSuccess }: SteelTypeFormProps
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
               placeholder="Ex: Aço Cromo-Molibdênio"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
             />
           </div>
 
@@ -98,7 +98,7 @@ export default function SteelTypeForm({ onClose, onSuccess }: SteelTypeFormProps
               value={formData.category}
               onChange={(e) => setFormData({ ...formData, category: e.target.value })}
               placeholder="Ex: Aço Liga"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
             />
           </div>
 

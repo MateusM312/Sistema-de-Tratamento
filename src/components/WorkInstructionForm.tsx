@@ -115,7 +115,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 value={formData.it_code}
                 onChange={(e) => setFormData({ ...formData, it_code: e.target.value })}
                 placeholder="Ex: IT-001"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
 
@@ -129,7 +129,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 value={formData.version}
                 onChange={(e) => setFormData({ ...formData, version: e.target.value })}
                 placeholder="Ex: 1.0"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
               value={formData.title}
               onChange={(e) => setFormData({ ...formData, title: e.target.value })}
               placeholder="Ex: Têmpera e Revenido para AISI 4140"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
             />
           </div>
 
@@ -157,7 +157,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               rows={3}
               placeholder="Descrição detalhada do processo"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
             />
           </div>
 
@@ -170,7 +170,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 required
                 value={formData.treatment_type}
                 onChange={(e) => setFormData({ ...formData, treatment_type: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               >
                 <option value="">Selecione</option>
                 <option value="Têmpera">Têmpera</option>
@@ -192,7 +192,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 value={formData.cooling_method}
                 onChange={(e) => setFormData({ ...formData, cooling_method: e.target.value })}
                 placeholder="Ex: Óleo, Água, Ar"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.temperature_min}
                 onChange={(e) => setFormData({ ...formData, temperature_min: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
             <div>
@@ -219,7 +219,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.temperature_max}
                 onChange={(e) => setFormData({ ...formData, temperature_max: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
             <div>
@@ -231,7 +231,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.duration_min}
                 onChange={(e) => setFormData({ ...formData, duration_min: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
             <div>
@@ -243,7 +243,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.duration_max}
                 onChange={(e) => setFormData({ ...formData, duration_max: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.hardness_input_min}
                 onChange={(e) => setFormData({ ...formData, hardness_input_min: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
             <div>
@@ -270,7 +270,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.hardness_input_max}
                 onChange={(e) => setFormData({ ...formData, hardness_input_max: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
             <div>
@@ -282,7 +282,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.hardness_output_min}
                 onChange={(e) => setFormData({ ...formData, hardness_output_min: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
             <div>
@@ -294,7 +294,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                 step="0.1"
                 value={formData.hardness_output_max}
                 onChange={(e) => setFormData({ ...formData, hardness_output_max: e.target.value })}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
               />
             </div>
           </div>
@@ -314,7 +314,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
                         type="checkbox"
                         checked={selectedSteels.includes(steel.code)}
                         onChange={() => handleSteelToggle(steel.code)}
-                        className="rounded border-gray-300 text-[#00205B] focus:ring-[#00205B]"
+                        className="rounded border-gray-300 text-[#1B5672] focus:ring-[#1B5672]"
                       />
                       <span className="text-sm text-gray-700">{steel.code}</span>
                     </label>
@@ -333,7 +333,7 @@ export default function WorkInstructionForm({ onClose, onSuccess }: WorkInstruct
               onChange={(e) => setFormData({ ...formData, special_notes: e.target.value })}
               rows={3}
               placeholder="Observações, cuidados especiais, etc."
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#1B5672] focus:border-transparent"
             />
           </div>
 

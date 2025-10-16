@@ -26,13 +26,13 @@ export default function RecommendationCard({ result, rank, onSave }: Recommendat
     <div className={`p-6 bg-white border-2 rounded-lg ${getScoreColor(confidenceScore)}`}>
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-start gap-4 flex-1">
-          <div className="flex items-center justify-center w-10 h-10 bg-[#00205B] text-white rounded-full font-bold">
+          <div className="flex items-center justify-center w-10 h-10 bg-[#1B5672] text-white rounded-full font-bold">
             {rank}
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 flex-wrap">
               <h4 className="font-bold text-lg text-gray-900">{workInstruction.it_code}</h4>
-              <span className="px-3 py-1 text-sm font-medium bg-[#00205B] bg-opacity-10 text-[#00205B] rounded">
+              <span className="px-3 py-1 text-sm font-medium bg-[#1B5672] bg-opacity-10 text-[#1B5672] rounded">
                 {workInstruction.treatment_type}
               </span>
               <div className="flex items-center gap-2">
