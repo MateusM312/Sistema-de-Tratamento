@@ -29,7 +29,7 @@ export default function SteelTypeList() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-12">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#DA291C]"></div>
       </div>
     );
   }
@@ -52,7 +52,7 @@ export default function SteelTypeList() {
         >
           <div className="flex items-start justify-between mb-2">
             <h4 className="font-bold text-gray-900">{steel.code}</h4>
-            <span className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded">
+            <span className="px-2 py-1 text-xs font-medium bg-[#00205B] bg-opacity-10 text-[#00205B] rounded">
               {steel.category}
             </span>
           </div>

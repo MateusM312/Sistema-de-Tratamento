@@ -28,7 +28,7 @@ export default function AdminPanel() {
               onClick={() => setActiveTab('steels')}
               className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
                 activeTab === 'steels'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-[#DA291C] text-[#DA291C]'
                   : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
             >
@@ -38,7 +38,7 @@ export default function AdminPanel() {
               onClick={() => setActiveTab('instructions')}
               className={`px-4 py-2 font-medium text-sm border-b-2 transition-colors ${
                 activeTab === 'instructions'
-                  ? 'border-blue-600 text-blue-600'
+                  ? 'border-[#DA291C] text-[#DA291C]'
                   : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'
               }`}
             >
@@ -56,7 +56,7 @@ export default function AdminPanel() {
                 </p>
                 <button
                   onClick={() => setShowSteelForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#DA291C] text-white rounded-lg hover:bg-[#B8232C] transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   Adicionar Aço
@@ -85,7 +85,7 @@ export default function AdminPanel() {
                 </p>
                 <button
                   onClick={() => setShowInstructionForm(true)}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#DA291C] text-white rounded-lg hover:bg-[#B8232C] transition-colors"
                 >
                   <Plus className="w-4 h-4" />
                   Adicionar IT

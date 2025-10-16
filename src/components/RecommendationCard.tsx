@@ -26,13 +26,13 @@ export default function RecommendationCard({ result, rank, onSave }: Recommendat
     <div className={`p-6 bg-white border-2 rounded-lg ${getScoreColor(confidenceScore)}`}>
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-start gap-4 flex-1">
-          <div className="flex items-center justify-center w-10 h-10 bg-blue-600 text-white rounded-full font-bold">
+          <div className="flex items-center justify-center w-10 h-10 bg-[#00205B] text-white rounded-full font-bold">
             {rank}
           </div>
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-2 flex-wrap">
               <h4 className="font-bold text-lg text-gray-900">{workInstruction.it_code}</h4>
-              <span className="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-800 rounded">
+              <span className="px-3 py-1 text-sm font-medium bg-[#00205B] bg-opacity-10 text-[#00205B] rounded">
                 {workInstruction.treatment_type}
               </span>
               <div className="flex items-center gap-2">
@@ -50,7 +50,7 @@ export default function RecommendationCard({ result, rank, onSave }: Recommendat
         </div>
         <button
           onClick={onSave}
-          className="ml-4 flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          className="ml-4 flex items-center gap-2 px-4 py-2 bg-[#DA291C] text-white rounded-lg hover:bg-[#B8232C] transition-colors"
         >
           <Save className="w-4 h-4" />
           Salvar

@@ -91,7 +91,7 @@ export default function HistoryPanel() {
     return (
       <div className="max-w-7xl mx-auto p-6">
         <div className="flex items-center justify-center py-12">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#DA291C]"></div>
         </div>
       </div>
     );
@@ -102,7 +102,7 @@ export default function HistoryPanel() {
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
         <div className="p-6 border-b border-gray-200">
           <div className="flex items-center gap-3">
-            <History className="w-8 h-8 text-blue-600" />
+            <History className="w-8 h-8 text-[#00205B]" />
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Histórico de Recomendações</h2>
               <p className="text-gray-600 text-sm mt-1">
@@ -129,7 +129,7 @@ export default function HistoryPanel() {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-2 flex-wrap">
                         <h4 className="font-bold text-gray-900">{rec.it_code}</h4>
-                        <span className="px-2 py-1 text-xs font-medium bg-blue-100 text-blue-800 rounded">
+                        <span className="px-2 py-1 text-xs font-medium bg-[#00205B] bg-opacity-10 text-[#00205B] rounded">
                           {rec.treatment_type}
                         </span>
                         <span className="px-2 py-1 text-xs font-medium bg-green-100 text-green-800 rounded">

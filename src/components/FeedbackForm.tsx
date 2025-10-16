@@ -104,7 +104,7 @@ export default function FeedbackForm({ recommendationId, onClose, onSuccess }: F
               value={formData.actualHardness}
               onChange={(e) => setFormData({ ...formData, actualHardness: e.target.value })}
               placeholder="Ex: 54.5"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
             />
           </div>
 
@@ -118,7 +118,7 @@ export default function FeedbackForm({ recommendationId, onClose, onSuccess }: F
               onChange={(e) => setFormData({ ...formData, comments: e.target.value })}
               rows={4}
               placeholder="Descreva o resultado do tratamento, problemas encontrados, sugestões, etc."
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
             />
           </div>
 
@@ -132,7 +132,7 @@ export default function FeedbackForm({ recommendationId, onClose, onSuccess }: F
               value={formData.userName}
               onChange={(e) => setFormData({ ...formData, userName: e.target.value })}
               placeholder="Seu nome"
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#00205B] focus:border-transparent"
             />
           </div>
 
@@ -147,7 +147,7 @@ export default function FeedbackForm({ recommendationId, onClose, onSuccess }: F
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 px-4 py-2 bg-[#DA291C] text-white rounded-lg hover:bg-[#B8232C] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading ? 'Salvando...' : 'Salvar Feedback'}
             </button>
