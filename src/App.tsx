@@ -17,7 +17,7 @@ function App() {
             <div className="flex items-center gap-3">
               <img src="/image-removebg-preview.png" alt="Normatic" className="h-12" />
               <div>
-                <h1 className="text-2xl font-bold text-white">Sistema de Tratamento Térmico</h1>
+                <h1 className="text-2xl font-bold text-white">Sistema de Tratamento Térmico para Normatic</h1>
                 <p className="text-sm text-gray-200">Assistente Inteligente de Recomendações</p>
               </div>
             </div>
